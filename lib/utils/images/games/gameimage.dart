@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
 List gameImage1 = [
-  "assets/games/wcc.png",
-  "assets/games/candy.png",
+  "assets/apps/drive.png",
+  "assets/apps/flip.jpg",
   "assets/games/chess.png",
   "assets/games/hill.png",
   "assets/games/d11.jpg",
 
 ];
 List gameName1 = [
-  "WCC2",
-  "Candy Crush",
+  "Google Drive",
+  "Flipkart Online",
   "Chess",
   "Hill Climb",
   "Dream11",
@@ -51,8 +51,8 @@ List gameName3 = [
 
 ////////////////////////////////////////////
 List gameImage = [
-  "assets/games/wcc.png",
-  "assets/games/candy.png",
+  "assets/apps/drive.png",
+  "assets/apps/flip.jpg",
   "assets/games/chess.png",
   "assets/games/hill.png",
   "assets/games/d11.jpg",
@@ -69,8 +69,8 @@ List gameImage = [
 ];
 
 List gameName = [
-  "WCC2",
-  "Candy Crush",
+  "Google Drive",
+  "Flipkart Online\nShopping app",
   "Chess",
   "Hill Climb",
   "Dream11",

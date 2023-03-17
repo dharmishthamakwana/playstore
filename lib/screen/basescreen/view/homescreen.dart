@@ -4,6 +4,7 @@ import 'package:playstore/screen/basescreen/provider/baseprovider.dart';
 
 import 'package:provider/provider.dart';
 
+import '../../appscreen/view/app_screen.dart';
 import '../../gamescreen/tabscreen1/onescreen/view/one_screen.dart';
 import '../../gamescreen/tabscreen2/scecond/view/second_view_screen.dart';
 
@@ -114,6 +115,7 @@ class _BasescreenState extends State<Basescreen> {
                           ),
                         ),
                       ),
+
                     ],
                   ),
                 ),
@@ -121,12 +123,14 @@ class _BasescreenState extends State<Basescreen> {
                   height: 583,
                   width: double.infinity,
                   child: TabBarView(
-                    children:[
-                      Foryouscreen(),
+                    children: [
+                      baseproviderTrue!.navigationClick
+                          ? Foryouscreen()
+                          : Appliactionscreen(),
                       Topviewscreen(),
                       Foryouscreen(),
-                      Foryouscreen(),
-                    ],),
+                    ],
+                  ),
                 ),
               ],
             ),
@@ -138,6 +142,7 @@ class _BasescreenState extends State<Basescreen> {
             currentIndex: baseproviderTrue!.i,
             onTap: (value) {
               baseprovider!.navigationPosition(value);
+              baseproviderTrue!.navigationOnClick();
             },
             items: [
               BottomNavigationBarItem(
@@ -150,19 +155,19 @@ class _BasescreenState extends State<Basescreen> {
                   icon: Icon(
                     Icons.widgets_outlined,
                   ),
-                  label: "Games",
+                  label: "Apps",
                   backgroundColor: Colors.white),
               BottomNavigationBarItem(
                   icon: Icon(
                     Icons.theaters,
                   ),
-                  label: "Games",
+                  label: "Offers",
                   backgroundColor: Colors.white),
               BottomNavigationBarItem(
                   icon: Icon(
                     Icons.book,
                   ),
-                  label: "Games",
+                  label: "Books",
                   backgroundColor: Colors.white),
             ],
           ),
