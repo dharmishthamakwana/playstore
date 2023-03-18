@@ -3,7 +3,6 @@ List appImage1 = [
   "assets/apps/insta.jpg",
   "assets/apps/Snapchat.jpg",
 ];
-
 List appName1 = [
   "Facebook",
   "Instagram",

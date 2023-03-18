@@ -98,16 +98,18 @@ class _AppliactionscreenState extends State<Appliactionscreen> {
                 width: 10,
               ),
               Container(
-                  height: 50,
-                  width: 50,
-                  decoration:
-                      BoxDecoration(borderRadius: BorderRadius.circular(10)),
-                  child: ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
-                      child: Image.asset(
-                        "${logo}",
-                        fit: BoxFit.cover,
-                      ))),
+                height: 50,
+                width: 50,
+                decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(10)),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(10),
+                  child: Image.asset(
+                    "${logo}",
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
               SizedBox(
                 width: 10,
               ),
