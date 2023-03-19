@@ -17,11 +17,10 @@ void main() {
           providers: [ChangeNotifierProvider(create: (context) => PlayStoreProvider(),)],
           child: MaterialApp(
             debugShowCheckedModeBanner: false,
-            initialRoute: '/',
             routes: {
-              // '/': (context) => TabBarPage(),
-              // 'AppView': (context) => AppViewPage(),
-              '/': (context) => AppIconViewPage(),
+              '/': (context) => TabBarPage(),
+              'AppView': (context) => AppViewPage(),
+              'AppIconView': (context) => AppIconViewPage(),
               'Games':(context) => GamesPage(),
             },
           ),
