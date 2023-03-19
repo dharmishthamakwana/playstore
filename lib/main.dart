@@ -1,30 +1,32 @@
+
 import 'package:flutter/material.dart';
-import 'package:playstore/screen/appscreen/view/app_screen.dart';
-import 'package:playstore/screen/basescreen/provider/baseprovider.dart';
-import 'package:playstore/screen/basescreen/view/homescreen.dart';
-import 'package:playstore/screen/gamescreen/tabscreen1/onescreen/view/one_screen.dart';
-import 'package:playstore/screen/gamescreen/tabscreen2/scecond/view/second_view_screen.dart';
-import 'package:playstore/screen/openscreen/view/open_screen.dart';
+import 'package:playstore/screen/home/provider/playstoreprovider.dart';
+import 'package:playstore/screen/home/view/appiconciewpage.dart';
+import 'package:playstore/screen/home/view/appviewpage.dart';
+import 'package:playstore/screen/home/view/gamespage.dart';
+import 'package:playstore/screen/home/view/tabbarpage.dart';
 import 'package:provider/provider.dart';
 
-void main()
-{
+import 'package:sizer/sizer.dart';
+
+void main() {
   runApp(
-    MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (context) => Baseprovider(),),
-      ],
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        // initialRoute: 'topview',
-        routes: {
-          '/' : (context) => Basescreen(),
-          'foryou' : (context) => Foryouscreen(),
-          'topview' : (context) => Topviewscreen(),
-          'app' : (context) => Appliactionscreen(),
-          'open' : (context) => Openscreen(),
-        },
-      ),
+    Sizer(
+      builder: (context, orientation, deviceType) {
+        return MultiProvider(
+          providers: [ChangeNotifierProvider(create: (context) => PlayStoreProvider(),)],
+          child: MaterialApp(
+            debugShowCheckedModeBanner: false,
+            initialRoute: '/',
+            routes: {
+              // '/': (context) => TabBarPage(),
+              // 'AppView': (context) => AppViewPage(),
+              '/': (context) => AppIconViewPage(),
+              'Games':(context) => GamesPage(),
+            },
+          ),
+        );
+      },
     ),
   );
 }
