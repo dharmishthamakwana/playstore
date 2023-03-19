@@ -74,7 +74,7 @@ class _ForYouPageState extends State<ForYouPage> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(21),
                         child:
-                            Image.asset("${ProviderTrue!.apps1[index].image}"),
+                        Image.asset("${ProviderTrue!.apps1[index].image}"),
                       ),
                     ),
                     Container(
@@ -82,7 +82,8 @@ class _ForYouPageState extends State<ForYouPage> {
                       height: 5.h,
                       alignment: Alignment.topLeft,
                       child: Text(
-                        "${ProviderTrue!.apps1[index].name}\n${ProviderTrue!.apps1[index].rating} ⭐",
+                        "${ProviderTrue!.apps1[index].name}\n${ProviderTrue!
+                            .apps1[index].rating} ⭐",
                         style: TextStyle(color: Colors.black),
                       ),
                     ),
@@ -121,19 +122,20 @@ class _ForYouPageState extends State<ForYouPage> {
                       height: 12.h,
                       width: 26.5.w,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(21),
-                          boxShadow: [
-                            BoxShadow(
-                                color: Colors.black38,
-                                blurRadius: 3,
-                                offset: Offset(0, 0))
-                          ]),
+                        borderRadius: BorderRadius.circular(21),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.black38,
+                              blurRadius: 3,
+                              offset: Offset(0, 0))
+                        ],
+                      ),
                       margin: EdgeInsets.all(15),
                       alignment: Alignment.center,
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(21),
                         child:
-                            Image.asset("${ProviderTrue!.apps2[index].image}"),
+                        Image.asset("${ProviderTrue!.apps2[index].image}"),
                       ),
                     ),
                     Container(
@@ -141,7 +143,8 @@ class _ForYouPageState extends State<ForYouPage> {
                       height: 5.h,
                       alignment: Alignment.topLeft,
                       child: Text(
-                        "${ProviderTrue!.apps2[index].name}\n${ProviderTrue!.apps2[index].rating} ⭐",
+                        "${ProviderTrue!.apps2[index].name}\n${ProviderTrue!
+                            .apps2[index].rating} ⭐",
                         style: TextStyle(color: Colors.black),
                       ),
                     ),
@@ -184,36 +187,39 @@ class _ForYouPageState extends State<ForYouPage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Container(
-                      height: 12.h,
-                      width: 26.5.w,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(21),
-                          boxShadow: [
-                            BoxShadow(
-                                color: Colors.black38,
-                                blurRadius: 3,
-                                offset: Offset(0, 0))
-                          ]),
-                      margin: EdgeInsets.all(15),
-                      alignment: Alignment.center,
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(21),
-                        child:
-                            Image.asset("${ProviderTrue!.apps3[index].image}"),
-                      ),
-                    ),
-                    Container(
-                      width: 24.w,
-                      height: 5.h,
-                      alignment: Alignment.topLeft,
-                      child: Text(
-                        "${ProviderTrue!.apps3[index].name}\n${ProviderTrue!.apps3[index].rating} ⭐",
-                        style: TextStyle(color: Colors.black),
-                      ),
-                    ),
-                  ],
+                  Container(
+                  height: 12.h,
+                  width: 26.5.w,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(21),
+                    boxShadow: [
+                      BoxShadow(
+                          color: Colors.black38,
+                          blurRadius: 3,
+                          offset: Offset(0, 0))
+                    ],
+                  ),
+                  margin: EdgeInsets.all(15),
+                  alignment: Alignment.center,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(21),
+                    child:
+                    Image.asset("${ProviderTrue!.apps3[index].image}"),
+                  ),
                 ),
+                Container(
+                  width: 24.w,
+                  height: 5.h,
+                  alignment: Alignment.topLeft,
+                  child: Text(
+                    "${ProviderTrue!.apps3[index].name}\n${ProviderTrue!
+                        .apps3[index].rating } ⭐",
+                  style: TextStyle(color: Colors.black,),
+                ),
+              ),]
+              ,
+              )
+              ,
               );
             },
           ),
